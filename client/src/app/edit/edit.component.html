@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Edit Pet</title>
+</head>
+<body>
+  
+    <form (submit)="onSubmit()">
+      <h2>Edit {{pet.name}}</h2>
+      <h3 *ngIf="errMessage">{{errMessage}}</h3>
+      <h5>Pet Name:</h5>
+      <input type="text" name="pet.name" [(ngModel)]="pet.name" />
+      <h5>Pet type:</h5>
+      <input type="text" name="pet.type" [(ngModel)]="pet.type" />
+      <h5>Description:</h5>
+      <input type="text" name="pet.desc" [(ngModel)]="pet.desc" />
+    
+      <h5>Skills:</h5>
+      <h6> Skill 1 :</h6>
+      <input type="text" name="pet.skills[0]" [(ngModel)]="pet.skills[0]" />
+      <h6> Skill 2 :</h6>
+      <input type="text" name="pet.skills[1]" [(ngModel)]="pet.skills[1]" />
+      <h6> Skill 3 :</h6>
+      <input type="text" name="pet.skills[2]" [(ngModel)]="pet.skills[2]" />
+    
+      <br>
+      <br>
+      <input type="submit" value="Edit Pet" />
+      <button [routerLink]="['/']">Edit Pet</button>
+    </form>  
+</body>
+</html>
+

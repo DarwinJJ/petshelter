@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <meta charset='UTF-8'>
+  <title>Pet Info</title>
+</head>
+<body>
+    <button [routerLink]="['/']">Back to home</button>
+    <h2>Details about {{pet.name}}</h2>
+    <h3> Pet type: {{pet.type}}</h3> 
+    <h3> Description: {{pet.desc}}</h3> 
+    <ul> <h3>Skill:</h3>
+      <li><h5>{{pet.skills[0]}}</h5></li>
+      <li><h5>{{pet.skills[1]}}</h5></li>
+      <li><h5>{{pet.skills[2]}}</h5></li>
+    </ul> 
+    <h3> Likes: {{pet.like}}</h3>
+
+    <button (click) = "likePet()">Like this pet</button>
+    <button (click) = "deletePet(pet._id)">Adopt this pet</button>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+  <meta charset='UTF-8'>
+ 
+  <title>Pet Shelter</title>
+</head>
+
+<body>
+    <button [routerLink]="['/new']">Add a pet to shelter</button>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Type</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of pets">
+          <th>{{p.name}}</th>
+          <td>{{p.type}}</td>
+          <td>
+            <button [routerLink]="['/detail', p._id ]">Detail</button>
+            <button [routerLink]="['/edit',p._id]">Edit</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+
+</html>
